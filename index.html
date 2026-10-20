@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!--
+  © 2026 Aetheron. Všechna práva vyhrazena / All rights reserved.
+  Ukázka návrhu (design preview) pro DATAMEDIC, s.r.o. Design, kód a uspořádání jsou autorským dílem Aetheron.
+  Kopírování, úpravy, rozšiřování nebo další použití bez písemného souhlasu je zakázáno.
+-->
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DATAMEDIC – záchrana dat</title>
+<meta name="description" content="Záchrana dat z pevných disků, RAID polí, flash disků, paměťových karet a CD/DVD. Diagnostika zdarma, nonstop hotline 774 633 420.">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noimageindex">
+<meta name="author" content="Aetheron">
+<meta name="copyright" content="© 2026 Aetheron. All rights reserved.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="bar" id="bar">
+  <a class="logo" href="#top" aria-label="DATAMEDIC"><i></i>DATAMEDIC</a>
+  <nav class="bar__nav" aria-label="Hlavní"><a href="#cenik">Ceník</a><a href="#postup">Postup</a><a href="#kontakt">Kontakt</a></nav>
+  <div class="bar__right">
+    <button class="track-toggle" type="button" aria-expanded="false" aria-controls="track">Moje zakázka</button>
+    <form class="track" id="track" autocomplete="off">
+      <input type="text" name="cislo" placeholder="Číslo zakázky" aria-label="Číslo zakázky">
+      <input type="password" name="heslo" placeholder="Heslo" aria-label="Heslo">
+      <button type="submit" aria-label="Zobrazit zakázku">Zobrazit</button>
+      <p class="track__msg" role="status" hidden>Ukázka – zde se zobrazí stav zakázky a faktury.</p>
+    </form>
+    <a class="bar__tel" href="tel:+420774633420">774 633 420</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="stage">
+    <h1>Co se stalo s&nbsp;vaším diskem?</h1>
+
+    <div class="console">
+      <div class="col col--media">
+        <ul id="media" role="listbox" aria-label="Typ nosiče"></ul>
+      </div>
+      <div class="col col--sym">
+        <ul id="sym" role="listbox" aria-label="Příznak"></ul>
+      </div>
+      <div class="col col--out" id="out" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <footer class="strip">
+    <p class="status" id="status"><i></i><span>Otevírací doba Po–Pá 9–17</span></p>
+    <p class="strip__mid">Diagnostika zdarma &nbsp;·&nbsp; platba až po úspěšné záchraně</p>
+    <a class="strip__addr" href="https://mapy.cz/zakladni?q=Na%20Pankr%C3%A1ci%201353%2F4%2C%20Praha%204" target="_blank" rel="noopener">Na Pankráci 1353/4, Praha 4</a>
+  </footer>
+</section>
+
+<section class="plate">
+  <img src="img/heads.jpg" alt="Otevřený pevný disk s čtecími hlavami nad plotnou" loading="lazy">
+  <p>Data na havarovaném disku nejsou vždy ztracena.</p>
+</section>
+
+<section class="facts">
+  <div>
+    <h3>Diagnostika zdarma</h3>
+    <p>Odhad nákladů do dvou pracovních hodin od dodání média.</p>
+  </div>
+  <div>
+    <h3>Platíte za výsledek</h3>
+    <p>Při neúspěšné záchraně bez poplatku za materiál a náhradní díly.</p>
+  </div>
+  <div>
+    <h3>Hotline nonstop</h3>
+    <p>Víkendy a svátky včetně. Expresní zakázky mimo pracovní dobu.</p>
+  </div>
+  <div>
+    <h3>14 dní archivace</h3>
+    <p>Zachráněná data u nás uchováme zdarma.</p>
+  </div>
+</section>
+
+<section class="prices" id="cenik">
+  <div class="wrap">
+    <div class="prices__head">
+      <h2>Ceník</h2>
+      <div class="tabs" role="tablist">
+        <button role="tab" aria-selected="true" data-t="hdd">Disky</button>
+        <button role="tab" aria-selected="false" data-t="flash">Flash a karty</button>
+        <button role="tab" aria-selected="false" data-t="opt">CD, DVD, Blu-ray</button>
+      </div>
+    </div>
+
+    <div class="pane" data-pane="hdd">
+      <table>
+        <thead>
+          <tr><th>3,5″</th><th>do 120 GB</th><th>160–500 GB</th><th>640 GB–2 TB</th></tr>
+          <tr class="sub"><th>2,5″</th><th>do 60 GB</th><th>80–200 GB</th><th>250–500 GB</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>Diagnostika</th><td>zdarma</td><td>zdarma</td><td>zdarma</td></tr>
+          <tr><th>Souborový systém</th><td>500 – 4 000</td><td>1 000 – 5 000</td><td>1 500 – 6 000</td></tr>
+          <tr><th>Elektronika</th><td>1 000 – 6 000</td><td>2 000 – 8 000</td><td>3 000 – 9 000</td></tr>
+          <tr><th>Povrch plotének</th><td>2 000 – 7 000</td><td>3 000 – 9 000</td><td>3 000 – 11 000</td></tr>
+          <tr><th>Čtecí hlavy</th><td>3 000 – 10 000</td><td>4 000 – 12 000</td><td>6 000 – 15 000</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pane" data-pane="flash" hidden>
+      <table>
+        <thead><tr><th>Flash disk</th><th>do 2 GB</th><th>4–16 GB</th><th>32–128 GB</th></tr></thead>
+        <tbody>
+          <tr><th>Souborový systém</th><td>400 – 2 000</td><td>500 – 2 500</td><td>600 – 3 000</td></tr>
+          <tr><th>Elektronika</th><td>600 – 5 000</td><td>800 – 7 000</td><td>1 000 – 9 000</td></tr>
+        </tbody>
+      </table>
+      <table>
+        <thead><tr><th>Paměťová karta</th><th>do 1 GB</th><th>2–8 GB</th><th>16–64 GB</th></tr></thead>
+        <tbody>
+          <tr><th>Souborový systém</th><td>400 – 1 600</td><td>500 – 2 000</td><td>600 – 2 500</td></tr>
+          <tr><th>Elektronika</th><td>800 – 5 000</td><td>1 000 – 7 000</td><td>1 200 – 9 000</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pane" data-pane="opt" hidden>
+      <table>
+        <thead><tr><th></th><th>CD</th><th>DVD</th><th>Blu-ray</th></tr></thead>
+        <tbody>
+          <tr><th>Souborový systém</th><td>500 – 2 000</td><td>500 – 3 000</td><td>1 500 – 5 000</td></tr>
+          <tr><th>Nečitelné</th><td>500 – 3 000</td><td>800 – 4 000</td><td>1 200 – 6 000</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="note">Ceny v Kč bez DPH 21&nbsp;%. Diagnostika je zdarma, mimo pracovní dobu 1&nbsp;600&nbsp;Kč za médium. RAID se cení individuálně. Studenti −20&nbsp;%, nespěcháte −25&nbsp;%, expres do 22&nbsp;h +50&nbsp;%, non-stop +100&nbsp;%.</p>
+  </div>
+</section>
+
+<section class="way" id="postup">
+  <div class="wrap">
+    <h2>Jak to probíhá</h2>
+    <ol>
+      <li><b>Zavoláte nebo napíšete</b><span>Popíšete, co se stalo. Poradíme zdarma.</span></li>
+      <li><b>Přinesete médium</b><span>Nemáte-li jak vyjmout disk, přineste celý počítač.</span></li>
+      <li><b>Diagnostika</b><span>Do dvou hodin znáte příčinu a cenu.</span></li>
+      <li><b>Záchrana</b><span>Platíte, až když se data podaří zachránit.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="contact" id="kontakt">
+  <div class="wrap contact__grid">
+    <div>
+      <p class="contact__lead">Hotline nonstop</p>
+      <a class="contact__big" href="tel:+420774633420">774 633 420</a>
+      <p class="contact__sub">774 MEDIC+ · i o víkendech a svátcích</p>
+    </div>
+    <dl>
+      <div><dt>Telefon</dt><dd><a href="tel:+420241406089">+420 241 406 089</a></dd></div>
+      <div><dt>E-mail</dt><dd><a href="mailto:info@datamedic.cz">info@datamedic.cz</a></dd></div>
+      <div><dt>Adresa</dt><dd>Na Pankráci 1353/4<br>140 00 Praha 4</dd></div>
+      <div><dt>Otevřeno</dt><dd>Po–Pá 9:00–12:00, 13:00–17:00<br>Mimo to po telefonické domluvě</dd></div>
+      <div><dt>Doprava</dt><dd>Metro Vyšehrad, pěšky kolem kongresového centra. Autem z centra přes Nuselský most.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>DATAMEDIC, s.r.o. · IČ 27647331</span>
+    <span>Zapsána v OR vedeném Městským soudem v Praze, oddíl C, vložka 121353</span>
+    <span class="foot__rights">Design &amp; kód © 2026 Aetheron · Ukázka návrhu pro DATAMEDIC · bez písemného souhlasu je jakékoli použití zakázáno</span>
+  </div>
+</footer>
+
+<div class="wm" aria-hidden="true">Ukázka návrhu · Aetheron</div>
+
+<div class="callbar">
+  <a href="tel:+420774633420">Zavolat hotline</a>
+  <a href="mailto:info@datamedic.cz">Napsat</a>
+</div>
+
+<script>
+(function(){
+  try{ if(window.top!==window.self && location.protocol!=='file:'){
+    var ok=false; try{ ok=window.top.location.hostname===location.hostname; }catch(e){}
+    if(!ok) window.top.location.replace(location.href);
+  }}catch(e){}
+  try{ console.log('%c© Aetheron','font:700 14px sans-serif;color:#e2352b','\nTento návrh je autorským dílem Aetheron. Kopírování a další použití bez písemného souhlasu je zakázáno.'); }catch(e){}
+  var stop=function(e){e.preventDefault();};
+  document.addEventListener('contextmenu',stop,true);
+  document.addEventListener('dragstart',function(e){if(e.target&&e.target.tagName==='IMG')stop(e);},true);
+  document.addEventListener('keydown',function(e){
+    var k=(e.key||'').toLowerCase(), c=e.ctrlKey||e.metaKey;
+    if(e.key==='F12'||(c&&(k==='s'||k==='u'))||(c&&e.shiftKey&&(k==='i'||k==='j'||k==='c'))) stop(e);
+  },true);
+  document.addEventListener('copy',function(e){
+    var s=String(window.getSelection()||'');
+    if(s.length<120||!e.clipboardData) return;
+    e.clipboardData.setData('text/plain',s+'\n\n© Aetheron – ukázka návrhu pro DATAMEDIC, kopírování zakázáno.');
+    e.preventDefault();
+  });
+})();
+</script>
+<script src="app.js"></script>
+</body>
+</html>

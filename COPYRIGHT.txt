@@ -1,0 +1,16 @@
+© 2026 Aetheron. Všechna práva vyhrazena.
+
+Tento návrh (design, kód, uspořádání, texty a grafické úpravy) je ukázkou návrhu webu pro DATAMEDIC, s.r.o.
+a je autorským dílem Aetheron. Bez písemného souhlasu autora je zakázáno jej kopírovat, upravovat,
+šířit, zveřejňovat nebo jinak používat, a to i částečně.
+
+© 2026 Aetheron. All rights reserved.
+
+This design preview (design, code, layout and visual treatment) was created by Aetheron for DATAMEDIC, s.r.o.
+No copying, modification, redistribution, publication or other use, in whole or in part, is permitted
+without prior written consent of the author.
+
+Třetí strany / Third party:
+- Fotografie: Pexels (pexels.com), licence Pexels – zástupné fotografie
+- Písma: Bricolage Grotesque, Instrument Sans (SIL Open Font License) via Google Fonts
+- Obsah a ceník: převzato z datamedic.cz, vlastník DATAMEDIC, s.r.o.
